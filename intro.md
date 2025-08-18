@@ -6,7 +6,7 @@ title: Bienvenida al curso
 ## El equipo!! 🦾🧠
 
 ::::{grid}
-:gutter: 3
+:gutter: 4
 
 :::{grid-item-card} Ph.D. Reinel Tabares
 :class-body: text-center
@@ -48,6 +48,19 @@ title: Bienvenida al curso
 ```
 :::
 ::::
+
+:::{grid-item-card} Sergio A. Holguin
+:class-body: text-center
+:class-header: bg-light text-center
+```{image} _static/images/sah.jpg
+:height: 100
+:class: rounded
+```
+^^^
+```{only} html
+[<img src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" width="25" height="20">](mailto:sergioa.holguin@autonoma.edu.co)
+```
+:::
 
 
 ::::{grid} 2
