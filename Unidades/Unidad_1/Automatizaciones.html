@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Automatizaciones &#8212; Programación Concurrente y Distribuida 2025 - 01 Ucaldas</title>
+    <title>Automatizaciones &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
   
   
   
@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -68,7 +65,6 @@
     <link rel="prev" title="Visualizaciones Avanzadas" href="VisualizacionDinamicaFoliumF.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +80,19 @@
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -93,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
@@ -117,8 +125,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,18 +154,22 @@
       
     
     
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark pst-js-only" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Búsqueda</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,86 +246,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Unidad2.html">Unidad 2: Arquitecturas para computación paralela</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad3.html">Unidad 3: Métricas de desempeño</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ejercicio.html">Ejercicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ley_de_Amdahl_Gustafson_Ejercicio.html">Ley de Amdahl y Gustafson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/CalculodeFLOPS.html">Precisión Simple Vs Precisión Doble y TFlops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Metricas%20programas%20paralelos.html">Medidas de desempeño</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Recursos%20Extra.html">Recursos Extra</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad4.html">Unidad 4: Hilos y Sockets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/Hilos_en_Python.html">Hilos en Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%201.html">Tarea 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/HilosJavaBasico.html">HilosJavaBasico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%202.html">Tarea 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Unidad5.html">Sockets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsBasicoPython.html">SocketsBasicoPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsServerPython.html">SocketsServerPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsClientePython.html">SocketsClientePython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsServerJava.html">SocketsServerJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsClienteJava.html">SocketsClienteJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/GPTChatServer.html">GPTChatServer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/GPTChatClient.html">GPTChatClient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/Tarea%20Unidad%205.html">Tarea Unidad 4</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6.html">Unidad 5: Infraestructura de cluster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6_5.html">Unidad 6: Concurrencia para desarrollo web</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad7.html">Unidad 7: OpenMP</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/threadsC.html">threadsC.ipynb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/OpenMP_en_C.html">OpenMP_en_C.ipynb</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad8.html">Unidad 8: Multiprocessing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/1%20-%20Multiprocessing.html">1 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/2%20-%20Multiprocessing.html">2 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/3%20-%20Multiprocessing.html">3 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/4%20-%20Multiprocessing.html">4 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/5%20-%20Multiprocessing.html">5 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/6%20-%20Multiprocessing.html">6 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/7%20-%20Multiprocessing.html">7 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/8%20-%20Multiprocessing.html">8 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/9%20-%20Multiprocessing.html">9 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/10%20-%20Multiprocessing.html">10 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Multiprocessing.html">Multiprocessing.ipynb</a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenPython.html">Ejercicio de procesamiento de imágenes en paralelo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenC.html">Cargar una imagen en C</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad9.html">Unidad 9: MPI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_9/Evaluemos_lo_aprendido.html">Evaluemos lo aprendido!!</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad10.html">Unidad 10: PyCUDA</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_sumar_elementos.html">PyCUDA_multiplicar_sumar_elementos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_matrices.html">PyCUDA_multiplicar_matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/Stable_Diffusion_GPU_vs_CPU.html">Stable_Diffusion_GPU_vs_CPU</a></li>
-
-</ul>
-</details></li>
 </ul>
 
     </div>
@@ -323,14 +254,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,16 +431,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -616,10 +550,10 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">folium</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
 <span class="n">state_geo</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;us_states.json&quot;</span><span class="p">))</span>
 
@@ -1129,8 +1063,8 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span> <span class="nn">smtplib</span>
 
 <span class="c1"># definamos la información que necistamos</span>
 <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;direccion@gmail.com&quot;</span>
@@ -1188,8 +1122,8 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span> <span class="nn">smtplib</span>
 
 <span class="c1"># definamos la información que necistamos</span>
 <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;direccion@gmail.com&quot;</span>
@@ -1228,7 +1162,7 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
         <span class="n">subtype</span><span class="o">=</span><span class="s2">&quot;html&quot;</span>
     <span class="p">)</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="c1"># Crear y adjuntar una gráfica como archivo .png</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gráfica de ejemplo&#39;</span><span class="p">)</span>
@@ -1268,7 +1202,7 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <h2>Envío masivo de correos.<a class="headerlink" href="#envio-masivo-de-correos" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/BioAITeamLearning/IntroPython_2024_01_UAI/main/Data/users.csv&quot;</span><span class="p">)</span>
@@ -2194,10 +2128,10 @@ Hello,Timothy this is your balance: 99.9. This is just a test
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ahora creemos una función que envíe el correo y que como parametro reciba, mensaje y correo de destino.</span>
 <span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span> <span class="nn">smtplib</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">send_mail</span><span class="p">(</span><span class="n">mensaje</span><span class="p">,</span><span class="n">destinatario</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">mensaje</span><span class="p">,</span><span class="n">destinatario</span><span class="p">):</span>
   <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;remitente@gmail.com&quot;</span>
 
   <span class="n">email</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
@@ -2281,7 +2215,7 @@ Requirement already satisfied: six&gt;=1.7.0 in /usr/local/lib/python3.10/dist-p
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Este pedazo de código es para poder correr Dash sobre los notebooks sin errores</span>
 <span class="c1"># Nativamente, dash no funciona en Colab entonces debemos colocar estas dos lineas</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyter_dash</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">jupyter_dash</span>
 <span class="n">jupyter_dash</span><span class="o">.</span><span class="n">default_mode</span><span class="o">=</span><span class="s2">&quot;external&quot;</span>
 </pre></div>
 </div>
@@ -2289,9 +2223,9 @@ Requirement already satisfied: six&gt;=1.7.0 in /usr/local/lib/python3.10/dist-p
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span> <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span> <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
@@ -2732,10 +2666,10 @@ if (outputEl) {{
 <h2>Ejemplo básico 2<a class="headerlink" href="#ejemplo-basico-2" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
 
 <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
 </pre></div>
 </div>
 </div>
@@ -2779,7 +2713,7 @@ if (outputEl) {{
     <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;grafico&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span> <span class="c1"># Definir en que objeto del layout colocar la salida de la funcion</span>
     <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)]</span> <span class="c1"># Definir en qué objeto del layout está el elemento de entrada</span>
 <span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">actualizar_grafico</span><span class="p">(</span><span class="n">año_seleccionado</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">actualizar_grafico</span><span class="p">(</span><span class="n">año_seleccionado</span><span class="p">):</span>
     <span class="n">df_filtrado</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Año&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">año_seleccionado</span><span class="p">]</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_filtrado</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Año&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Valor&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fig</span>
@@ -2819,7 +2753,7 @@ if (outputEl) {{
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># importamos pandas para leer el archivo csv</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
@@ -3239,10 +3173,10 @@ if (outputEl) {{
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
 
 <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
 </pre></div>
 </div>
 </div>
@@ -3285,7 +3219,7 @@ if (outputEl) {{
 <span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
     <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;graph&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span> <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;selection&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span> <span class="c1"># Definir los objetos de salida y de entrada de datos que se van a interactuar</span>
 <span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">display_animated_graph</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">display_animated_graph</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
     <span class="n">animations</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># Definimos un diccionario que contiene para cada opción un tipo de gráfico diferente</span>
         <span class="s2">&quot;GDP - Scatter&quot;</span><span class="p">:</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="c1"># El primero es un scatter entonces le asignamos a la llave &quot;GDP - Scatter&quot; como valor el gráfico de scatter con plotly</span>
             <span class="n">df</span><span class="p">,</span>                      <span class="c1"># Establecemos el nombre del dataframe</span>
@@ -3395,8 +3329,7 @@ if (outputEl) {{
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -3467,8 +3400,8 @@ Por Reinel Tabares, Johan Piña, Brayan Arteaga
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

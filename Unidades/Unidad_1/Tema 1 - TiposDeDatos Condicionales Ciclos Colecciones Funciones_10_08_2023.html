@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introducción &#8212; Programación Concurrente y Distribuida 2025 - 01 Ucaldas</title>
+    <title>Introducción &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
   
   
   
@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -68,7 +65,6 @@
     <link rel="prev" title="Repaso Python y C para programación concurrente y distribuida" href="repasoPythonC.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +80,19 @@
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -93,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
@@ -117,8 +125,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,18 +154,22 @@
       
     
     
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark pst-js-only" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Búsqueda</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -235,86 +246,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Unidad2.html">Unidad 2: Arquitecturas para computación paralela</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad3.html">Unidad 3: Métricas de desempeño</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ejercicio.html">Ejercicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ley_de_Amdahl_Gustafson_Ejercicio.html">Ley de Amdahl y Gustafson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/CalculodeFLOPS.html">Precisión Simple Vs Precisión Doble y TFlops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Metricas%20programas%20paralelos.html">Medidas de desempeño</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Recursos%20Extra.html">Recursos Extra</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad4.html">Unidad 4: Hilos y Sockets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/Hilos_en_Python.html">Hilos en Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%201.html">Tarea 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/HilosJavaBasico.html">HilosJavaBasico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%202.html">Tarea 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Unidad5.html">Sockets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsBasicoPython.html">SocketsBasicoPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsServerPython.html">SocketsServerPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsClientePython.html">SocketsClientePython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsServerJava.html">SocketsServerJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/SocketsClienteJava.html">SocketsClienteJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/GPTChatServer.html">GPTChatServer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/GPTChatClient.html">GPTChatClient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_5/Tarea%20Unidad%205.html">Tarea Unidad 4</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6.html">Unidad 5: Infraestructura de cluster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6_5.html">Unidad 6: Concurrencia para desarrollo web</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad7.html">Unidad 7: OpenMP</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/threadsC.html">threadsC.ipynb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/OpenMP_en_C.html">OpenMP_en_C.ipynb</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad8.html">Unidad 8: Multiprocessing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/1%20-%20Multiprocessing.html">1 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/2%20-%20Multiprocessing.html">2 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/3%20-%20Multiprocessing.html">3 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/4%20-%20Multiprocessing.html">4 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/5%20-%20Multiprocessing.html">5 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/6%20-%20Multiprocessing.html">6 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/7%20-%20Multiprocessing.html">7 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/8%20-%20Multiprocessing.html">8 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/9%20-%20Multiprocessing.html">9 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/10%20-%20Multiprocessing.html">10 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Multiprocessing.html">Multiprocessing.ipynb</a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenPython.html">Ejercicio de procesamiento de imágenes en paralelo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenC.html">Cargar una imagen en C</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad9.html">Unidad 9: MPI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_9/Evaluemos_lo_aprendido.html">Evaluemos lo aprendido!!</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad10.html">Unidad 10: PyCUDA</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_sumar_elementos.html">PyCUDA_multiplicar_sumar_elementos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_matrices.html">PyCUDA_multiplicar_matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/Stable_Diffusion_GPU_vs_CPU.html">Stable_Diffusion_GPU_vs_CPU</a></li>
-
-</ul>
-</details></li>
 </ul>
 
     </div>
@@ -323,14 +254,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,16 +431,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -669,8 +603,8 @@
 <p>Con Colab, puedes aprovechar por completo las bibliotecas más populares de Python para analizar y visualizar datos. La celda de código que se incluye a continuación usa <strong>NumPy</strong> para generar algunos datos aleatorios y <strong>matplotlib</strong> para visualizarlos. Para editar el código, haz clic en la celda y comienza a editar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="n">ys</span> <span class="o">=</span> <span class="mi">200</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ys</span><span class="p">))]</span>
@@ -837,7 +771,7 @@ Codename:	focal
 <h1>Conexión con Google drive<a class="headerlink" href="#conexion-con-google-drive" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -926,7 +860,7 @@ j= &lt;class &#39;complex&#39;&gt;
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
 <span class="n">z</span>
 </pre></div>
@@ -1035,8 +969,8 @@ j= &lt;class &#39;complex&#39;&gt;
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">getsizeof</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">yi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">getsizeof</span>
+<span class="kn">import</span> <span class="nn">sys</span> <span class="k">as</span> <span class="nn">yi</span>
 </pre></div>
 </div>
 </div>
@@ -1330,7 +1264,7 @@ Convertir número a cadena de texto= 66
 <h1>Numeros Aleatorios<a class="headerlink" href="#numeros-aleatorios" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;imprime un numero aleatorio entero=&#39;</span><span class="p">,</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;selecciona aleatoriamente=&#39;</span><span class="p">,</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">&quot;uno&quot;</span><span class="p">,</span> <span class="s2">&quot;dos&quot;</span><span class="p">,</span> <span class="s2">&quot;tres&quot;</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;imprime un numero aleatorio decimal entre 0 y 1=&#39;</span><span class="p">,</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
@@ -1364,7 +1298,7 @@ imprime una letra aleatoria= U
 <h1>Libreria Math<a class="headerlink" href="#libreria-math" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Factorial=&quot;</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PI=&quot;</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;E=&quot;</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">e</span><span class="p">)</span>
@@ -1395,7 +1329,7 @@ Raiz cuadrada= 2.0
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1409,7 +1343,7 @@ Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdo
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">83</span><span class="o">-</span><span class="mi">136236</span><span class="n">f1537d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="ne">ZeroDivisionError</span>: division by zero
@@ -2620,12 +2554,12 @@ El cociente de la división es:  4
 <p>No se declara el tipo de los argumentos de las funciones. La semática de la implementación ha de estar preparada para funcionar con los tipos de datos que quieres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">funcion_1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">funcion_1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span>
     <span class="k">return</span> <span class="n">r</span><span class="o">+</span><span class="n">b</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">greatest</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">greatest</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">a</span>
     <span class="k">else</span><span class="p">:</span>
@@ -2701,7 +2635,7 @@ El cociente de la división es:  4
 <p>Podemos definir valores por defecto para los argumentos de las funciones y llamarlas usando explícitamente el nombre de los argumentos. Además, las funciones pueden devolver varios valores.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
 </pre></div>
 </div>
@@ -2733,7 +2667,7 @@ El cociente de la división es:  4
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="n">p</span>
 </pre></div>
 </div>
@@ -2784,10 +2718,10 @@ El cociente de la división es:  4
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f_power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">f_powers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">f_powers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">p2</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">p1</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="n">p2</span>
 </pre></div>
 </div>
@@ -2855,7 +2789,7 @@ El cociente de la división es:  4
 <p>Como ya sabemos los números se pasan por valor y crean una copia dentro de la función, por eso no les afecta externamente lo que hagamos con ellos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">doblar_valor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">doblar_valor</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
     <span class="k">return</span> <span class="n">x</span>
 </pre></div>
@@ -2895,7 +2829,7 @@ El cociente de la división es:  4
 <p>Sin embargo las listas u otras colecciones, al ser tipos compuestos se pasan por referencia, y si las modificamos dentro de la función estaremos modificándolas también fuera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">doblar_valores</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">doblar_valores</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
         <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
@@ -2934,7 +2868,7 @@ El cociente de la división es:  4
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># función para determinar el cociente</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">funcionCociente</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">funcionCociente</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
   <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
   <span class="n">r</span><span class="o">=</span><span class="n">x</span>
   <span class="k">while</span> <span class="n">r</span><span class="o">&gt;=</span><span class="n">w</span><span class="p">:</span>
@@ -2948,7 +2882,7 @@ El cociente de la división es:  4
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># función para determinar el residuo</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">funcionResiduo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">funcionResiduo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
   <span class="n">q</span><span class="o">=</span><span class="mi">0</span>
   <span class="n">r</span><span class="o">=</span><span class="n">x</span>
   <span class="k">while</span> <span class="n">r</span><span class="o">&gt;=</span><span class="n">w</span><span class="p">:</span>
@@ -2962,7 +2896,7 @@ El cociente de la división es:  4
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># función para determinar si un numero es par</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">funcionPar</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">funcionPar</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
   <span class="k">if</span> <span class="n">funcionResiduo</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
     <span class="n">par</span><span class="o">=</span><span class="kc">True</span>
   <span class="k">else</span><span class="p">:</span>
@@ -2974,7 +2908,7 @@ El cociente de la división es:  4
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">funcionMultiplicar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcionMultiplicar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
   <span class="n">z</span><span class="o">=</span><span class="mi">0</span>
   <span class="n">u</span><span class="o">=</span><span class="n">x</span>
   <span class="n">v</span><span class="o">=</span><span class="n">w</span>
@@ -3042,7 +2976,7 @@ El resultado de la mutiplicación es:  30
 <p>Manejar cualquier tipo de error que pase en un bloque de código</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ejemplo_try_except</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ejemplo_try_except</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">resultado</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="n">valor</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El resultado es:&quot;</span><span class="p">,</span> <span class="n">resultado</span><span class="p">)</span>
@@ -3067,7 +3001,7 @@ Ha ocurrido un error: unsupported operand type(s) for /: &#39;int&#39; and &#39;
 <p>Manejando un tipo especifico de error</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">int_times_two</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">int_times_two</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
@@ -3115,7 +3049,7 @@ Ha ocurrido un error: unsupported operand type(s) for /: &#39;int&#39; and &#39;
 <p>Manejo de la sentencia finally para que, pase o no pase un error, siempre ejecute lo que se coloque en la sentencia finally</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">division_segura</span><span class="p">(</span><span class="n">dividendo</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">division_segura</span><span class="p">(</span><span class="n">dividendo</span><span class="p">,</span> <span class="n">divisor</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">resultado</span> <span class="o">=</span> <span class="n">dividendo</span> <span class="o">/</span> <span class="n">divisor</span>
         <span class="k">return</span> <span class="n">resultado</span>
@@ -3172,7 +3106,7 @@ Operación finalizada.
 <p>Este tipo de sentencias se utilizan para generar errores personalizados dentro del código</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_positive_integer_from_user</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_positive_integer_from_user</span><span class="p">():</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a positive integer: &quot;</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;That is not a positive number!&quot;</span><span class="p">)</span>
@@ -3278,8 +3212,7 @@ thanks!
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -3390,8 +3323,8 @@ Por Reinel Tabares, Johan Piña, Brayan Arteaga
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

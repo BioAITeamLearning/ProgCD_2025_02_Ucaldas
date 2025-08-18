@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SocketsServerPython &#8212; Programación Concurrente y Distribuida 2025 - 01 Ucaldas</title>
+    <title>SocketsServerPython &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
   
   
   
@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=78d55cf8"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -64,11 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Unidades/Unidad_5/SocketsServerPython';</script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="SocketsClientePython" href="SocketsClientePython.html" />
-    <link rel="prev" title="SocketsBasicoPython" href="SocketsBasicoPython.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -93,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
@@ -117,8 +123,9 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -147,18 +154,22 @@
       
     
     
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
-    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark pst-js-only" alt="Programación Concurrente y Distribuida 2025 - 01 Ucaldas - Home"/>
+    <img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-light" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>
+    <script>document.write(`<img src="https://avatars.githubusercontent.com/u/142033488?s=200&v=4" class="logo__image only-dark" alt="Programación Concurrente y Distribuida 2025 - 02 Ucaldas - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Búsqueda</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Búsqueda</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -169,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad1.html">Unidad 1: Clusters en computación paralela/distribuida</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Unidad_1/repasoPythonC.html">Repaso Python y C para programación concurrente y distribuida</a></li>
 
@@ -235,86 +246,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Unidad2.html">Unidad 2: Arquitecturas para computación paralela</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad3.html">Unidad 3: Métricas de desempeño</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ejercicio.html">Ejercicio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Ley_de_Amdahl_Gustafson_Ejercicio.html">Ley de Amdahl y Gustafson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/CalculodeFLOPS.html">Precisión Simple Vs Precisión Doble y TFlops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Metricas%20programas%20paralelos.html">Medidas de desempeño</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_3/Recursos%20Extra.html">Recursos Extra</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Unidad4.html">Unidad 4: Hilos y Sockets</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Hilos_en_Python.html">Hilos en Python</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%201.html">Tarea 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/HilosJavaBasico.html">HilosJavaBasico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_4/Tarea%202.html">Tarea 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Unidad5.html">Sockets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SocketsBasicoPython.html">SocketsBasicoPython</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">SocketsServerPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SocketsClientePython.html">SocketsClientePython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SocketsServerJava.html">SocketsServerJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SocketsClienteJava.html">SocketsClienteJava</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPTChatServer.html">GPTChatServer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="GPTChatClient.html">GPTChatClient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tarea%20Unidad%205.html">Tarea Unidad 4</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6.html">Unidad 5: Infraestructura de cluster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Unidad6_5.html">Unidad 6: Concurrencia para desarrollo web</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad7.html">Unidad 7: OpenMP</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/threadsC.html">threadsC.ipynb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_7/OpenMP_en_C.html">OpenMP_en_C.ipynb</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad8.html">Unidad 8: Multiprocessing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/1%20-%20Multiprocessing.html">1 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/2%20-%20Multiprocessing.html">2 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/3%20-%20Multiprocessing.html">3 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/4%20-%20Multiprocessing.html">4 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/5%20-%20Multiprocessing.html">5 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/6%20-%20Multiprocessing.html">6 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/7%20-%20Multiprocessing.html">7 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/8%20-%20Multiprocessing.html">8 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/9%20-%20Multiprocessing.html">9 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/10%20-%20Multiprocessing.html">10 - Multiprocessing.ipynb</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Multiprocessing.html">Multiprocessing.ipynb</a></li>
-
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenPython.html">Ejercicio de procesamiento de imágenes en paralelo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_8/Ejercicio_imagenC.html">Cargar una imagen en C</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad9.html">Unidad 9: MPI</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_9/Evaluemos_lo_aprendido.html">Evaluemos lo aprendido!!</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Unidad10.html">Unidad 10: PyCUDA</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_sumar_elementos.html">PyCUDA_multiplicar_sumar_elementos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/PyCUDA_multiplicar_matrices.html">PyCUDA_multiplicar_matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Unidad_10/Stable_Diffusion_GPU_vs_CPU.html">Stable_Diffusion_GPU_vs_CPU</a></li>
-
-</ul>
-</details></li>
 </ul>
 
     </div>
@@ -323,14 +254,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,16 +431,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="claro/oscuro" aria-label="claro/oscuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 
 </div></div>
       
@@ -544,9 +478,9 @@
 <h1>SocketsServerPython<a class="headerlink" href="#socketsserverpython" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="c1"># creamos un socket TCP/IP</span>
 <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
@@ -557,7 +491,7 @@
 <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">server_address</span><span class="p">)</span>
 
 <span class="c1"># definimos una función para el hilo de procesamiento de clientes</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">procesar_cliente</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">semaforo</span><span class="p">,</span> <span class="n">barrera</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">procesar_cliente</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">semaforo</span><span class="p">,</span> <span class="n">barrera</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Conexión desde&#39;</span><span class="p">,</span> <span class="n">addr</span><span class="p">)</span>
 
@@ -647,24 +581,6 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="SocketsBasicoPython.html"
-       title="página anterior">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">SocketsBasicoPython</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="SocketsClientePython.html"
-       title="siguiente página">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">SocketsClientePython</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -715,8 +631,8 @@ Por Reinel Tabares, Johan Piña, Brayan Arteaga
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
