@@ -52,7 +52,7 @@ title: Bienvenida al curso
 :::{grid-item-card} Sergio A. Holguin
 :class-body: text-center
 :class-header: bg-light text-center
-```{image} _static/images/sah.jpg
+```{image} _static\images\sergio.JPG
 :height: 100
 :class: rounded
 ```
