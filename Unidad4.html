@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Unidad 4: Hilos y Sockets &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
+    <title>Unidad 4: Hilos &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
   
   
   
@@ -53,7 +53,7 @@
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script src="_static/translations.js?v=d190bf04"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -61,6 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Unidad4';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Hilos en Python" href="Unidades/Unidad_5/Hilos_en_Python.html" />
+    <link rel="prev" title="Recursos Extra" href="Unidades/Unidad_3/Recursos%20Extra.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +180,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Unidad1.html">Unidad 1: Clusters en computación paralela/distribuida</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_1/repasoPythonC.html">Repaso Python y C para programación concurrente y distribuida</a></li>
 
@@ -252,6 +252,22 @@
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_3/CalculodeFLOPS.html">Precisión Simple Vs Precisión Doble y TFlops</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_3/Metricas%20programas%20paralelos.html">Medidas de desempeño</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_3/Recursos%20Extra.html">Recursos Extra</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unidad 4: Hilos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/Hilos_en_Python.html">Hilos en Python</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/Tarea%201.html">Tarea 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/HilosJavaBasico.html">HilosJavaBasico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/Tarea%202.html">Tarea 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidad5.html">Sockets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsBasicoPython.html">SocketsBasicoPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsServerPython.html">SocketsServerPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsClientePython.html">SocketsClientePython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsServerJava.html">SocketsServerJava</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsClienteJava.html">SocketsClienteJava</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/GPTChatServer.html">GPTChatServer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/GPTChatClient.html">GPTChatClient</a></li>
 </ul>
 </details></li>
 </ul>
@@ -439,7 +455,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unidad 4: Hilos y Sockets</h1>
+    <h1>Unidad 4: Hilos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -451,6 +467,11 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-unidad">Contenido de la unidad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion-a-hilos">Introducción a Hilos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepto-de-procesos">Concepto de procesos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#como-funciona-a-nivel-de-hardware">¿Cómo funciona a nivel de hardware?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#que-hace-el-so">¿Qué hace el SO?</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepto-de-hilos-threads">Concepto de hilos (threads)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#procesos-versus-hilos-processes-versus-threads">Procesos versus hilos (processes versus threads)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ventajas-de-los-hilos">Ventajas de los hilos</a></li>
@@ -486,14 +507,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unidad-4-hilos-y-sockets">
-<h1>Unidad 4: Hilos y Sockets<a class="headerlink" href="#unidad-4-hilos-y-sockets" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unidad-4-hilos">
+<h1>Unidad 4: Hilos<a class="headerlink" href="#unidad-4-hilos" title="Link to this heading">#</a></h1>
 <section id="contenido-de-la-unidad">
 <h2>Contenido de la unidad<a class="headerlink" href="#contenido-de-la-unidad" title="Link to this heading">#</a></h2>
 <img src="_static/images/contenidoU4.png"/>
 </section>
 <section id="introduccion-a-hilos">
 <h2>Introducción a Hilos<a class="headerlink" href="#introduccion-a-hilos" title="Link to this heading">#</a></h2>
+<section id="concepto-de-procesos">
+<h3>Concepto de procesos<a class="headerlink" href="#concepto-de-procesos" title="Link to this heading">#</a></h3>
+<section id="como-funciona-a-nivel-de-hardware">
+<h4>¿Cómo funciona a nivel de hardware?<a class="headerlink" href="#como-funciona-a-nivel-de-hardware" title="Link to this heading">#</a></h4>
+<p>Imagina que la memoria RAM de tu computadora es como una gran pizarra.</p>
+<p>Cuando un proceso inicia (por ejemplo, el navegador web), el sistema operativo le asigna un espacio de la memoria en esa pizarra. Este espacio es privado para ese proceso. Se divide en secciones como:</p>
+<ul class="simple">
+<li><p><strong>Área de Código</strong>: Donde está el programa en sí (las instrucciones que se van a ejecutar).</p></li>
+<li><p><strong>Área de Datos:</strong> Donde se guardan las variables globales.</p></li>
+<li><p><strong>Heap</strong>: Una zona de memoria para variables creadas dinámicamente (por ejemplo, con new en Java o C++).</p></li>
+<li><p><strong>Stack</strong>: Un área de memoria para las variables locales de cada función.</p></li>
+</ul>
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*7OcxF0ZUFinmq14bzqFjYg.png"/>
+<p>Ahora, cuando creas un hilo dentro de ese proceso, el sistema operativo no le asigna un nuevo espacio de memoria completo. En su lugar, el nuevo hilo comparte la mayoría de las áreas que ya existen: el código, los datos y el heap.</p>
+<p>La única parte que es privada para cada hilo es su propio Stack. En el stack se almacenan las variables locales de las funciones que el hilo está ejecutando.</p>
+</section>
+<section id="que-hace-el-so">
+<h4>¿Qué hace el SO?<a class="headerlink" href="#que-hace-el-so" title="Link to this heading">#</a></h4>
+<p>Aquí es donde entra el concepto de planificación o scheduling del sistema operativo (OS).</p>
+<p>El núcleo del procesador es la unidad física que realmente ejecuta las instrucciones. Piensa en él como un operario muy, muy rápido 👷‍♂️. Ese operario solo puede concentrarse en una lista de tareas (un hilo) a la vez.</p>
+<p>El <strong>sistema operativo</strong> actúa como el jefe de obra 🧑‍💼. Su trabajo es:</p>
+<p>Cargar el hilo en el núcleo: Toma las instrucciones del hilo y se las pasa al núcleo para que las ejecute.</p>
+<p>Sacar el hilo del núcleo: Después de un tiempo muy corto (milisegundos), detiene la ejecución de ese hilo y lo guarda, anotando exactamente dónde se quedó.</p>
+<p>Cambiar de contexto: Carga otro hilo en el mismo núcleo. Este proceso de guardar y cargar un hilo se llama cambio de contexto (context switch).</p>
+<p>El sistema operativo hace esto tan rápido y continuamente que a nosotros, los humanos, nos da la ilusión de que todos los hilos se están ejecutando al mismo tiempo en el mismo núcleo. Esto se conoce como concurrencia. Sin embargo, en un núcleo físico, la ejecución es secuencial, un hilo después del otro.</p>
+</section>
+</section>
 <section id="concepto-de-hilos-threads">
 <h3>Concepto de hilos (threads)<a class="headerlink" href="#concepto-de-hilos-threads" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -571,7 +619,14 @@ document.write(`
 <span class="sd-summary-text">Desventajas</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <img src="_static/images/U4_3.jpg"/>
 </div>
-</details></section>
+</details><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wax7jfcrYCSDlBBNEbb6QQ.png">
+<p><strong>¿Qué problemas crees que podrían surgir si dos hilos intentan escribir en la misma variable global al mismo tiempo?</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><strong>Gemini</strong></p>
+<p><a class="reference external" href="https://g.co/gemini/share/23b7e4b80265">https://g.co/gemini/share/23b7e4b80265</a></p>
+</div>
+</section>
 </section>
 <section id="la-clase-thread-y-sus-metodos-principales">
 <h2>La clase Thread y sus métodos principales<a class="headerlink" href="#la-clase-thread-y-sus-metodos-principales" title="Link to this heading">#</a></h2>
@@ -622,7 +677,7 @@ document.write(`
 <p class="sd-card-text"><strong>💬 Configurar Java</strong></p>
 </div>
 <div class="sd-card-body text-center docutils">
-<a class="reference internal image-reference" href="https://gcloud.devoteam.com/wp-content/uploads/sites/32/2021/08/Google_Docs_logo_2014-2020.svg.png"><img alt="https://gcloud.devoteam.com/wp-content/uploads/sites/32/2021/08/Google_Docs_logo_2014-2020.svg.png" src="https://gcloud.devoteam.com/wp-content/uploads/sites/32/2021/08/Google_Docs_logo_2014-2020.svg.png" style="height: 100px;" />
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/558px-Google_Docs_2020_Logo.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/558px-Google_Docs_2020_Logo.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/558px-Google_Docs_2020_Logo.svg.png" style="height: 100px;" />
 </a>
 <p class="sd-card-text">Configuración subsistema Linux y notebooks de java Locales</p>
 </div>
@@ -674,6 +729,8 @@ Realizar la **Tarea 2** de esta Unidad 4.
 
 --></section>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -706,6 +763,24 @@ Realizar la **Tarea 2** de esta Unidad 4.
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Unidades/Unidad_3/Recursos%20Extra.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Recursos Extra</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Unidades/Unidad_5/Hilos_en_Python.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Hilos en Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -724,6 +799,11 @@ Realizar la **Tarea 2** de esta Unidad 4.
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-unidad">Contenido de la unidad</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion-a-hilos">Introducción a Hilos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepto-de-procesos">Concepto de procesos</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#como-funciona-a-nivel-de-hardware">¿Cómo funciona a nivel de hardware?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#que-hace-el-so">¿Qué hace el SO?</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepto-de-hilos-threads">Concepto de hilos (threads)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#procesos-versus-hilos-processes-versus-threads">Procesos versus hilos (processes versus threads)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ventajas-de-los-hilos">Ventajas de los hilos</a></li>

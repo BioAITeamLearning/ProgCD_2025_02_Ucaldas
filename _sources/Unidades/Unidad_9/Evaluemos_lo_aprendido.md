@@ -18,7 +18,7 @@
 
 **💬 Taller Taller-MPI4PY**
 ^^^
-```{image} https://gcloud.devoteam.com/wp-content/uploads/sites/32/2021/08/Google_Docs_logo_2014-2020.svg.png
+```{image} https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/558px-Google_Docs_2020_Logo.svg.png
 :height: 100
 ```
 :::
