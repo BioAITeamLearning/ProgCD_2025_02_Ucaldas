@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -574,10 +574,10 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">folium</span>
-<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">folium</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
 <span class="n">state_geo</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;us_states.json&quot;</span><span class="p">))</span>
 
@@ -1087,8 +1087,8 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
 
 <span class="c1"># definamos la información que necistamos</span>
 <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;direccion@gmail.com&quot;</span>
@@ -1146,8 +1146,8 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
 
 <span class="c1"># definamos la información que necistamos</span>
 <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;direccion@gmail.com&quot;</span>
@@ -1186,7 +1186,7 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
         <span class="n">subtype</span><span class="o">=</span><span class="s2">&quot;html&quot;</span>
     <span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="c1"># Crear y adjuntar una gráfica como archivo .png</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gráfica de ejemplo&#39;</span><span class="p">)</span>
@@ -1226,7 +1226,7 @@ us_states.json.1    100%[===================&gt;]  85.63K  --.-KB/s    in 0.02s
 <h2>Envío masivo de correos.<a class="headerlink" href="#envio-masivo-de-correos" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/BioAITeamLearning/IntroPython_2024_01_UAI/main/Data/users.csv&quot;</span><span class="p">)</span>
@@ -2152,10 +2152,10 @@ Hello,Timothy this is your balance: 99.9. This is just a test
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ahora creemos una función que envíe el correo y que como parametro reciba, mensaje y correo de destino.</span>
 <span class="c1"># Importemos las librerias</span>
-<span class="kn">from</span> <span class="nn">email.message</span> <span class="kn">import</span> <span class="n">EmailMessage</span>
-<span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">email.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">EmailMessage</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">smtplib</span>
 
-<span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">mensaje</span><span class="p">,</span><span class="n">destinatario</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">send_mail</span><span class="p">(</span><span class="n">mensaje</span><span class="p">,</span><span class="n">destinatario</span><span class="p">):</span>
   <span class="n">remitente</span> <span class="o">=</span> <span class="s2">&quot;remitente@gmail.com&quot;</span>
 
   <span class="n">email</span> <span class="o">=</span> <span class="n">EmailMessage</span><span class="p">()</span>
@@ -2239,7 +2239,7 @@ Requirement already satisfied: six&gt;=1.7.0 in /usr/local/lib/python3.10/dist-p
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Este pedazo de código es para poder correr Dash sobre los notebooks sin errores</span>
 <span class="c1"># Nativamente, dash no funciona en Colab entonces debemos colocar estas dos lineas</span>
-<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">jupyter_dash</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">jupyter_dash</span>
 <span class="n">jupyter_dash</span><span class="o">.</span><span class="n">default_mode</span><span class="o">=</span><span class="s2">&quot;external&quot;</span>
 </pre></div>
 </div>
@@ -2247,9 +2247,9 @@ Requirement already satisfied: six&gt;=1.7.0 in /usr/local/lib/python3.10/dist-p
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span> <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span> <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
@@ -2690,10 +2690,10 @@ if (outputEl) {{
 <h2>Ejemplo básico 2<a class="headerlink" href="#ejemplo-basico-2" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
 
 <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
 </pre></div>
 </div>
 </div>
@@ -2737,7 +2737,7 @@ if (outputEl) {{
     <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;grafico&#39;</span><span class="p">,</span> <span class="s1">&#39;figure&#39;</span><span class="p">),</span> <span class="c1"># Definir en que objeto del layout colocar la salida de la funcion</span>
     <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)]</span> <span class="c1"># Definir en qué objeto del layout está el elemento de entrada</span>
 <span class="p">)</span>
-<span class="k">def</span> <span class="nf">actualizar_grafico</span><span class="p">(</span><span class="n">año_seleccionado</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">actualizar_grafico</span><span class="p">(</span><span class="n">año_seleccionado</span><span class="p">):</span>
     <span class="n">df_filtrado</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Año&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">año_seleccionado</span><span class="p">]</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_filtrado</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Año&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Valor&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fig</span>
@@ -2777,7 +2777,7 @@ if (outputEl) {{
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># importamos pandas para leer el archivo csv</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
@@ -3197,10 +3197,10 @@ if (outputEl) {{
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span> <span class="c1"># Importamos la librería de plotly para realizar los gráficos</span>
 
 <span class="c1"># Estos son los componentes de Dash que vamos a utilizar más adelante</span>
-<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dash</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Input</span>
 </pre></div>
 </div>
 </div>
@@ -3243,7 +3243,7 @@ if (outputEl) {{
 <span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
     <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;graph&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span> <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;selection&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span> <span class="c1"># Definir los objetos de salida y de entrada de datos que se van a interactuar</span>
 <span class="p">)</span>
-<span class="k">def</span> <span class="nf">display_animated_graph</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">display_animated_graph</span><span class="p">(</span><span class="n">selection</span><span class="p">):</span>
     <span class="n">animations</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># Definimos un diccionario que contiene para cada opción un tipo de gráfico diferente</span>
         <span class="s2">&quot;GDP - Scatter&quot;</span><span class="p">:</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="c1"># El primero es un scatter entonces le asignamos a la llave &quot;GDP - Scatter&quot; como valor el gráfico de scatter con plotly</span>
             <span class="n">df</span><span class="p">,</span>                      <span class="c1"># Establecemos el nombre del dataframe</span>
@@ -3311,7 +3311,7 @@ if (outputEl) {{
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_1"
+            path: "./Unidades\Unidad_1"
         },
         predefinedOutput: true
     }

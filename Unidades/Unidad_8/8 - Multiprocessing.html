@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -532,12 +532,12 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">multiprocessing</span>
-<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Barrier</span><span class="p">,</span> <span class="n">Lock</span><span class="p">,</span> <span class="n">Process</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multiprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Barrier</span><span class="p">,</span> <span class="n">Lock</span><span class="p">,</span> <span class="n">Process</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="k">def</span> <span class="nf">test_with_barrier</span><span class="p">(</span><span class="n">synchronizer</span><span class="p">,</span> <span class="n">serializer</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_with_barrier</span><span class="p">(</span><span class="n">synchronizer</span><span class="p">,</span> <span class="n">serializer</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">current_process</span><span class="p">()</span><span class="o">.</span><span class="n">name</span>
     <span class="n">synchronizer</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
     <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
@@ -549,7 +549,7 @@ document.write(`
     <span class="c1">#print(&quot;Proceso %s ----&gt; %s&quot; %(name,datetime.fromtimestamp(now)))</span>
     <span class="c1">#serializer.release()</span>
 
-<span class="k">def</span> <span class="nf">test_without_barrier</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_without_barrier</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">current_process</span><span class="p">()</span><span class="o">.</span><span class="n">name</span>
     <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proceso </span><span class="si">%s</span><span class="s2"> ----&gt; </span><span class="si">%s</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">name</span> <span class="p">,</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">now</span><span class="p">)))</span>
@@ -590,7 +590,7 @@ Proceso p4 - prueba_sin_barrera ----&gt; 2023-05-07 16:41:32.872981
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_8"
+            path: "./Unidades\Unidad_8"
         },
         predefinedOutput: true
     }

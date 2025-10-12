@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -531,9 +531,9 @@ document.write(`
 <p>Es la métrica más sencilla, solo tenemos que calcular el tiempo desde que empieza a correr el programa hasta que termina.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">tiempo</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">funcion</span><span class="p">(</span><span class="n">tiempo</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
 
 
@@ -578,8 +578,8 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Si tenemos los tiempos del algoritmo, ejecutado con diferentes procesadores</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
 
 <span class="n">n_cores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">128</span><span class="p">])</span>
@@ -613,7 +613,7 @@ document.write(`
 <p>Supongamos que tenemos un problema que se puede resolver en 100 segundos con un algoritmo secuencial. Queremos resolver el mismo problema utilizando un algoritmo paralelo en una computadora con 4 procesadores. Ejecutamos el algoritmo paralelo y medimos que tarda 25 segundos en completar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">t_secuencial</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">t_para</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -683,7 +683,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Ahora miremos el desempeño del algoritmo variando el número de procesadores</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">64</span><span class="p">])</span>
 <span class="n">frac_ser</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -745,8 +745,8 @@ s = f + N(1 - f) = N - fx(N - 1)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Valores de N (número de procesadores) de 1 a 120</span>
 <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">121</span><span class="p">)</span>
@@ -816,29 +816,29 @@ s = f + N(1 - f) = N - fx(N - 1)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Ejecute la siguente celda para importar los insumos del ejercicio</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">t_secuencial</span> <span class="o">=</span> <span class="mi">60</span> <span class="c1">#@param</span>
 <span class="n">t_paralelo</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1">#@param</span>
 <span class="n">t_exportdata</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">60</span> <span class="c1">#@param</span>
-<span class="k">def</span> <span class="nf">leerdata</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">leerdata</span><span class="p">():</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">asignarMemoria</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">asignarMemoria</span><span class="p">():</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">copiarDatos</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">copiarDatos</span><span class="p">():</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">kernelSecuencial</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_secuencial</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">kernelSecuencial</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_secuencial</span><span class="p">):</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">kernelParalelo</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_paralelo</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">kernelParalelo</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_paralelo</span><span class="p">):</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">exportarDatos</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_exportdata</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">exportarDatos</span><span class="p">(</span><span class="n">t</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="n">t_exportdata</span><span class="p">):</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">liberarMemoria</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">liberarMemoria</span><span class="p">():</span>
   <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1073,9 +1073,9 @@ La aceleracion de todo el codigo paralelo vs secuencial solo en el kernel es: 11
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Conversión a binario en precisión simple.</span>
-<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
 
-<span class="k">def</span> <span class="nf">float_to_binary32</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">float_to_binary32</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
     <span class="c1"># Estructura IEEE 754 para float de 32 bits</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;f&#39;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
     <span class="c1"># Convierte los 4 bytes a una secuencia binaria de 32 bits</span>
@@ -1096,9 +1096,9 @@ La aceleracion de todo el codigo paralelo vs secuencial solo en el kernel es: 11
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Conversión a binario en precisión doble.</span>
-<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
 
-<span class="k">def</span> <span class="nf">float_to_binary64</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">float_to_binary64</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
     <span class="c1"># Estructura IEEE 754 para float de 64 bits</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
     <span class="c1"># Convierte los 8 bytes a una secuencia binaria de 64 bits</span>
@@ -1145,7 +1145,7 @@ La aceleracion de todo el codigo paralelo vs secuencial solo en el kernel es: 11
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_3"
+            path: "./Unidades\Unidad_3"
         },
         predefinedOutput: true
     }

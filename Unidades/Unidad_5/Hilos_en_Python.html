@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -578,11 +578,11 @@ kwargs={})</strong></p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempo</span>
-<span class="kn">import</span> <span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempo</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
 
-<span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="c1">#Tiempo de 0&lt;t&lt;1.5</span>
     <span class="k">return</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Función llamada por el hilo </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span><span class="k">i</span>)
 
@@ -613,16 +613,16 @@ Función llamada por el hilo 0
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span> <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">time</span>      <span class="c1"># librería para tiempo</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span> <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>      <span class="c1"># librería para tiempo</span>
 
-<span class="k">def</span> <span class="nf">first_function</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">first_function</span><span class="p">():</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39; iniciando...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39; finalizó</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
     <span class="k">return</span>
 
-<span class="k">def</span> <span class="nf">second_function</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">second_function</span><span class="p">():</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39; iniciando...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="nb">print</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s1">&#39; finalizó </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
@@ -655,9 +655,9 @@ Thread-23 finalizó
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear y ejecutar hilos con temporizador</span>
-<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
 
-<span class="k">def</span> <span class="nf">ejecutar</span><span class="p">(</span><span class="n">tiempo_s</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar</span><span class="p">(</span><span class="n">tiempo_s</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;El hilo </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> te saluda luego de tu espera de </span><span class="si">{</span><span class="n">tiempo_s</span><span class="si">}</span><span class="s1"> segundos&#39;</span><span class="p">)</span>
 
 <span class="c1"># creamos un temporizador</span>
@@ -682,11 +682,11 @@ Thread-23 finalizó
 <h2>¿Cómo crear hilos, ejecutarlos y que el principal espere?<a class="headerlink" href="#como-crear-hilos-ejecutarlos-y-que-el-principal-espere" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempos</span>
-<span class="kn">import</span> <span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
 
-<span class="k">def</span> <span class="nf">ejecutar</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Comienza </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="c1">#Tiempo de 0&lt;t&lt;1.5</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Termina </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -746,11 +746,11 @@ El hilo principal sí espera por el resto de hilos.
 <h2>¿Cómo crear hilos, ejecutarlos y que el principal no espere?<a class="headerlink" href="#como-crear-hilos-ejecutarlos-y-que-el-principal-no-espere" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempos</span>
-<span class="kn">import</span> <span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>        <span class="c1"># Manejo de hilos</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>  <span class="c1"># Pausar tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>           <span class="c1"># Números aleatorios</span>
 
-<span class="k">def</span> <span class="nf">ejecutar</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Comienza </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span> <span class="c1">#Tiempo de 0&lt;t&lt;1.5</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Termina </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -805,21 +805,21 @@ Termina Hilo 1
 <h3>Caso 1<a class="headerlink" href="#caso-1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">class</span> <span class="nc">myThread</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">myThread</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
         <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">threadID</span> <span class="o">=</span> <span class="n">threadID</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span>
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Iniciando &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="n">print_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="p">)</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Finalizando &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">counter</span><span class="p">:</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))))</span> <span class="c1"># Thread-#: HH:MM:SS</span>
@@ -859,21 +859,21 @@ Finalizando Thread-2
 <h3>Caso 2<a class="headerlink" href="#caso-2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">class</span> <span class="nc">myThread</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">myThread</span> <span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
         <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">threadID</span> <span class="o">=</span> <span class="n">threadID</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">delay</span> <span class="o">=</span> <span class="n">delay</span>
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Iniciando &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="n">print_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">delay</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Finalizando &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">counter</span><span class="p">:</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M:%S&quot;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))))</span> <span class="c1"># Thread-#: HH:MM:SS</span>
@@ -931,18 +931,18 @@ Finalizando Thread-2
 <p>Un punto clave a tener en cuenta al usar subprocesos es que siempre debe asegurarse de <strong>nunca dejar ningún subproceso ejecutándose en segundo plano.</strong> Esta es una programación muy mala y puede causarle todo tipo de problemas cuando trabaja en aplicaciones más grandes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
 
-<span class="k">class</span> <span class="nc">CookBook</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CookBook</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hilo Trabajando!</span><span class="se">\n</span><span class="s2">&quot;</span>
 
-    <span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">print_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hilo Inicia</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">x</span><span class="o">=</span><span class="mi">0</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">):</span>
@@ -985,16 +985,16 @@ Hilo Finaliza
 <h3>Iniciar mis hilos<a class="headerlink" href="#iniciar-mis-hilos" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Variable global para indicar a los hilos que deben detenerse</span>
 <span class="k">global</span> <span class="n">exit_flag</span>
 <span class="n">exit_flag</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="c1"># Función que ejecutará cada hilo</span>
-<span class="k">def</span> <span class="nf">thread_function</span><span class="p">(</span><span class="n">thread_num</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">thread_function</span><span class="p">(</span><span class="n">thread_num</span><span class="p">):</span>
     <span class="k">while</span> <span class="n">exit_flag</span><span class="p">:</span>
 
         <span class="c1"># Es aquí donde puedes poner el código que hace el trabajo del hilo</span>
@@ -1071,9 +1071,9 @@ Hilo 0 detenido
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerias que utilizaremos</span>
-<span class="kn">import</span> <span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
-<span class="kn">import</span> <span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
 
 <span class="c1"># Definir las 3 matrices de 4x10, con números enteros entre 0 y 10</span>
 <span class="n">matrix1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -1084,7 +1084,7 @@ Hilo 0 detenido
 <span class="n">result_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 
 <span class="c1"># Definir una función para sumar las filas de las matrices</span>
-<span class="k">def</span> <span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">result_matrix</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix1</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix2</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix3</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Se demora 2 segundos sumando una fila</span>
@@ -1155,9 +1155,9 @@ Result Matrix:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerias que utilizaremos</span>
-<span class="kn">import</span> <span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
-<span class="kn">import</span> <span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
 
 <span class="c1"># Definir las 3 matrices de 4x10, con números enteros entre 0 y 10</span>
 <span class="n">matrix1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -1168,7 +1168,7 @@ Result Matrix:
 <span class="n">result_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 
 <span class="c1"># Definir una función para sumar las filas de las matrices</span>
-<span class="k">def</span> <span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">result_matrix</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix1</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix2</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix3</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Se demora 2 segundos sumando una fila</span>
@@ -1239,9 +1239,9 @@ Result Matrix:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerias que utilizaremos</span>
-<span class="kn">import</span> <span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
-<span class="kn">import</span> <span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
 
 <span class="c1"># Definir las 3 matrices de 4x10, con números enteros entre 0 y 10</span>
 <span class="n">matrix1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -1252,7 +1252,7 @@ Result Matrix:
 <span class="n">result_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 
 <span class="c1"># Definir una función para sumar las filas de las matrices</span>
-<span class="k">def</span> <span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">result_matrix</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix1</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix2</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix3</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Se demora 2 segundos sumando una fila</span>
@@ -1325,9 +1325,9 @@ Result Matrix:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerias que utilizaremos</span>
-<span class="kn">import</span> <span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
-<span class="kn">import</span> <span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
 
 <span class="c1"># Definir las 3 matrices de 4x10, con números enteros entre 0 y 10</span>
 <span class="n">matrix1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -1338,7 +1338,7 @@ Result Matrix:
 <span class="n">result_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 
 <span class="c1"># Definir una función para sumar las filas de las matrices</span>
-<span class="k">def</span> <span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_rows</span><span class="p">(</span><span class="n">row_idx</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">result_matrix</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix1</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix2</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix3</span><span class="p">[</span><span class="n">row_idx</span><span class="p">]</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">row_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">matrix1</span><span class="p">[</span><span class="n">row_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix2</span><span class="p">[</span><span class="n">row_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix3</span><span class="p">[</span><span class="n">row_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
@@ -1445,8 +1445,8 @@ Result Matrix:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
 
 <span class="n">t_1</span> <span class="o">=</span> <span class="mi">8</span> <span class="c1"># Tiempo que emplea el algoritmo ejecutandose en un solo hilo</span>
@@ -1479,14 +1479,14 @@ Result Matrix:
 <p>Si vamos a depurar algo relacionado con los threads es recomendable utilizar el módulo logging.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># Configuramos el nivel de registro para DEBUG</span>
 <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;[</span><span class="si">%(levelname)s</span><span class="s1">] - </span><span class="si">%(threadName)-10s</span><span class="s1"> : </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">indice</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">worker</span><span class="p">(</span><span class="n">indice</span><span class="p">):</span>
     <span class="c1"># Registramos un mensaje de depuración al inicio de la función</span>
     <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Inicio depuración&#39;</span><span class="p">)</span>
 
@@ -1581,7 +1581,7 @@ Result Matrix:
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 
 <span class="c1"># Ejecutamos el archivo utilizando subprocess</span>
 <span class="n">resultado</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="n">archivo</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
@@ -1619,20 +1619,20 @@ Hilo ejecutandose
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">var</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">ejecutar1</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar1</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">var</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inicio </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># esperamos un tiempo aleatorio entre 0 y 1 segundos</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Final </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">var</span> <span class="o">=</span> <span class="n">var</span><span class="o">+</span><span class="s2">&quot;Hola &quot;</span>
 
-<span class="k">def</span> <span class="nf">ejecutar2</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar2</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">var</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inicio </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># esperamos un tiempo aleatorio entre 0 y 1 segundos</span>
@@ -1674,20 +1674,20 @@ Hola Mundo
 <h4>Caso 2<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">time</span><span class="w"> </span><span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
 <span class="n">var</span> <span class="o">=</span> <span class="nb">str</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">ejecutar1</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar1</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">var</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inicio </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># esperamos un tiempo aleatorio entre 0 y 1 segundos</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Final </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">var</span> <span class="o">=</span> <span class="n">var</span><span class="o">+</span><span class="s2">&quot;Hola &quot;</span>
 
-<span class="k">def</span> <span class="nf">ejecutar2</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar2</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">var</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Inicio </span><span class="si">{</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># esperamos un tiempo aleatorio entre 0 y 1 segundos</span>
@@ -1750,9 +1750,9 @@ Final Hilo 1
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># Vaciar el archivo resultados.txt</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;resultados.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -1763,7 +1763,7 @@ Final Hilo 1
 
 <span class="c1"># Función donde se hace uso del .acquire() y del .release()</span>
 
-<span class="k">def</span> <span class="nf">escribir_valor</span><span class="p">(</span><span class="n">autor</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">escribir_valor</span><span class="p">(</span><span class="n">autor</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
     <span class="n">lock_acceso_fichero</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>                 <span class="c1"># Solicitar acceso al recurso</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;resultados.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fichero</span><span class="p">:</span>  <span class="c1"># Abrir archivo para añadir contenido al final</span>
         <span class="n">fichero</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">autor</span><span class="si">}</span><span class="s1"> - </span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>     <span class="c1"># Escribir</span>
@@ -1780,7 +1780,7 @@ Final Hilo 1
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># Función llamada desde los hilos</span>
-<span class="k">def</span> <span class="nf">ejecutar</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ejecutar</span><span class="p">():</span>
     <span class="c1">#time.sleep(2*random.random())</span>
     <span class="n">valor</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
     <span class="n">escribir_valor</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
@@ -1827,10 +1827,10 @@ Hilo 3 - 44
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span> <span class="nf">imprimir_mensaje</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">semaforo</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">imprimir_mensaje</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">semaforo</span><span class="p">):</span>
     <span class="n">semaforo</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, soy el hilo&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -1893,11 +1893,11 @@ Hola, soy el hilo 7
 <p>Vamos a establecer una barrera de forma que nadie pueda despedirse si no ha saludado todo el mundo (es decir, los hilos).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 
-<span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">barrier</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">worker</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">barrier</span><span class="p">):</span>
     <span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;worker </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> saluda...&quot;</span><span class="p">)</span>
     <span class="n">barrier</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>  <span class="c1"># esperar a que todos los hilos lleguen a la barrera</span>
@@ -1935,9 +1935,9 @@ worker 2 se despide...
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerias que utilizaremos</span>
-<span class="kn">import</span> <span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
-<span class="kn">import</span> <span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>   <span class="c1"># Manejo de hilos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># Manejo de matrices</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>        <span class="c1"># Manejo de tiempos</span>
 
 <span class="c1"># Definir las 3 matrices de 4x10, con números enteros entre 0 y 10</span>
 <span class="n">matrix1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
@@ -1947,7 +1947,7 @@ worker 2 se despide...
 <span class="n">result_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 
 <span class="c1"># Definir una función para sumar las filas de las matrices</span>
-<span class="k">def</span> <span class="nf">mul_fila</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">posF</span><span class="p">,</span><span class="n">posC</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">mul_fila</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">posF</span><span class="p">,</span><span class="n">posC</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">result_matrix</span>
     <span class="n">result_matrix</span><span class="p">[</span><span class="n">posF</span><span class="p">,</span><span class="n">posC</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">fil</span><span class="p">,</span><span class="n">col</span><span class="p">)</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Se demora 2 segundos sumando una fila</span>
@@ -2017,7 +2017,7 @@ Result Matrix:
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_5"
+            path: "./Unidades\Unidad_5"
         },
         predefinedOutput: true
     }

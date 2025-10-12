@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -564,7 +564,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># </span>
 <span class="c1"># ¿Cómo importamos la librería?</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> 
 </pre></div>
 </div>
 </div>
@@ -712,7 +712,7 @@ dtype: float64
 <h3>Acceso a los elementos de una Serie<a class="headerlink" href="#acceso-a-los-elementos-de-una-serie" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 
 <span class="c1"># Creemos una serie a partir de un diccionario que tiene nombres de personas como claves y saldos como valores</span>
@@ -881,7 +881,7 @@ dtype: float64
 <p>se trata de la capacidad de pandas para realizar operaciones element-wise (elemento a elemento) en estructuras de datos con diferentes formas, alineando automáticamente las dimensiones según sea necesario.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">test_balance_data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;pasan&#39;</span><span class="p">:</span> <span class="mf">20.00</span><span class="p">,</span>
@@ -1066,7 +1066,7 @@ dtype: float64
 <p>Un DataFrame es una estructura de datos bidimensional en la biblioteca pandas de Python, similar a una tabla de datos o una hoja de cálculo en Excel. Cada DataFrame tiene un índice asociado, que son las etiquetas de las filas, y columnas, que son las etiquetas de las columnas. Los elementos de un DataFrame pueden ser de diferentes tipos, como enteros, flotantes, cadenas, entre otros.</p>
 <img src="https://camo.qiitausercontent.com/5a1924b47a5200f0618fddda44db1f357201d5ef/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3131373437392f32623061326364342d636131392d633665342d313364342d3664323133636432306539642e706e67"/><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">test_users_list</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="s1">&#39;Craig&#39;</span><span class="p">,</span> <span class="s1">&#39;Dennis&#39;</span><span class="p">,</span> <span class="mf">42.42</span><span class="p">],</span>
@@ -1273,7 +1273,7 @@ dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vamos a crear un dataframe con algunos datos de usuarios</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">test_user_data</span> <span class="o">=</span> <span class="p">{</span> <span class="c1"># Estos son los datos de los usuarios y el balance</span>
     <span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Craig&#39;</span><span class="p">,</span> <span class="s1">&#39;Treasure&#39;</span><span class="p">,</span> <span class="s1">&#39;Ashley&#39;</span><span class="p">,</span> <span class="s1">&#39;Guil&#39;</span><span class="p">],</span>
@@ -1568,7 +1568,7 @@ Name: guil, dtype: object
 <section id="la-sintaxis-general-para-cargar-datos-en-un-dataframe-de-pandas-es-la-siguiente">
 <h3>La sintaxis general para cargar datos en un DataFrame de pandas es la siguiente:<a class="headerlink" href="#la-sintaxis-general-para-cargar-datos-en-un-dataframe-de-pandas-es-la-siguiente" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">read_</span><span class="o">&lt;</span><span class="n">formato</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;ruta/al/archivo&#39;</span><span class="p">)</span>
 
 </pre></div>
@@ -1577,7 +1577,7 @@ Name: guil, dtype: object
 <section id="la-sintaxis-general-para-guardar-datos-desde-un-dataframe-de-pandas-es-la-siguiente">
 <h3>La sintaxis general para guardar datos desde un DataFrame de pandas es la siguiente:<a class="headerlink" href="#la-sintaxis-general-para-guardar-datos-desde-un-dataframe-de-pandas-es-la-siguiente" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
     <span class="n">df</span><span class="o">.</span><span class="n">to_</span><span class="o">&lt;</span><span class="n">formato</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;ruta/al/archivo&#39;</span><span class="p">)</span>
     
 </pre></div>
@@ -1606,7 +1606,7 @@ adrian,Adrian,Fang,adrian.fang@teamtreehouse.com,True,2018-04-28,3,30.01
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">my_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/users.csv&#39;</span><span class="p">)</span>
 <span class="n">my_data</span> <span class="c1"># Note que hay una columna sin nombre, que es el índice y carga como Unnamed: 0. vamos a arreglar eso</span>
@@ -2850,7 +2850,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">my_excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;data/datos_rrss.xlsx&#39;</span><span class="p">)</span>
 <span class="n">my_excel</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3085,7 +3085,7 @@ Note: you may need to restart the kernel to use updated packages.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejemplo para cargar datos desde la web</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/datasets/investor-flow-of-funds-us/master/data/weekly.csv&#39;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -3207,7 +3207,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="c1"># URL de la página web que contiene la tabla</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://en.wikipedia.org/wiki/List_of_countries_by_inflation_rate&#39;</span>
@@ -4099,7 +4099,7 @@ Note: you may need to restart the kernel to use updated packages.
 <p>Vamos a leer otras tablas a partir de HTML</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">table_MN</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Minnesota&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total de tablas obtenidas: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">table_MN</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -4129,7 +4129,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">table_MN</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">&#39;https://en.wikipedia.org/wiki/Minnesota&#39;</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;presidential election results&#39;</span><span class="p">)</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">table_MN</span><span class="p">)</span>
 </pre></div>
@@ -4277,9 +4277,9 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span> <span class="c1"># Este es el método para crear la conexión con la base de datos</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span> <span class="c1"># Este es el método para crear la conexión con la base de datos</span>
 
 <span class="c1"># Crear la conexión con la base de datos</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///data/mibase.db&#39;</span><span class="p">)</span>  <span class="c1"># Para otros motores debes cambiar el nombre del motor </span>
@@ -4460,7 +4460,7 @@ Note: you may need to restart the kernel to use updated packages.
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_1"
+            path: "./Unidades\Unidad_1"
         },
         predefinedOutput: true
     }

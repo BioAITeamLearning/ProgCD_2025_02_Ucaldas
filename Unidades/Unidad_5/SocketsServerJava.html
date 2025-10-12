@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -529,13 +529,13 @@ document.write(`
 <h3>Server<a class="headerlink" href="#server" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.BufferedReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.ServerSocket</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="p">;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.ServerSocket</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.Socket</span><span class="p">;</span>
 
-<span class="n">public</span> <span class="k">class</span> <span class="nc">Servidor</span> <span class="p">{</span>
+<span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Servidor</span> <span class="p">{</span>
     <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
         <span class="nb">int</span> <span class="n">puerto</span> <span class="o">=</span> <span class="mi">8080</span><span class="p">;</span>
 
@@ -575,12 +575,12 @@ document.write(`
 <h3>Client<a class="headerlink" href="#client" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.BufferedReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="p">;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.Socket</span><span class="p">;</span>
 
-<span class="n">public</span> <span class="k">class</span> <span class="nc">Cliente</span> <span class="p">{</span>
+<span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Cliente</span> <span class="p">{</span>
     <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">String</span> <span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
         <span class="nb">int</span> <span class="n">puerto</span> <span class="o">=</span> <span class="mi">8080</span><span class="p">;</span>
@@ -616,16 +616,16 @@ document.write(`
 <h2>Servidor Avanzado<a class="headerlink" href="#servidor-avanzado" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.io.BufferedReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.PrintWriter</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.ServerSocket</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.concurrent.ExecutorService</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.concurrent.Executors</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.concurrent.Semaphore</span><span class="p">;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.ServerSocket</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.Socket</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.ExecutorService</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.Executors</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.concurrent.Semaphore</span><span class="p">;</span>
 
-<span class="n">public</span> <span class="k">class</span> <span class="nc">ServidorMultihilos</span> <span class="p">{</span>
+<span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ServidorMultihilos</span> <span class="p">{</span>
 
     <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
         <span class="nb">int</span> <span class="n">puerto</span> <span class="o">=</span> <span class="mi">8070</span><span class="p">;</span>
@@ -708,7 +708,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_5"
+            path: "./Unidades\Unidad_5"
         },
         predefinedOutput: true
     }

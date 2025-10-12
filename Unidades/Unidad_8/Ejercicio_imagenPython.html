@@ -28,11 +28,11 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -549,15 +549,15 @@ Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages 
 <h2>Funciones útiles para cargar y guardar imágenes.<a class="headerlink" href="#funciones-utiles-para-cargar-y-guardar-imagenes" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>  <span class="c1"># Importar para visualización</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>  <span class="c1"># Importar para visualización</span>
 
-<span class="k">def</span> <span class="nf">cargar_imagen</span><span class="p">(</span><span class="n">ruta</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cargar_imagen</span><span class="p">(</span><span class="n">ruta</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">guardar_imagen</span><span class="p">(</span><span class="n">imagen</span><span class="p">,</span> <span class="n">ruta</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">guardar_imagen</span><span class="p">(</span><span class="n">imagen</span><span class="p">,</span> <span class="n">ruta</span><span class="p">):</span>
     <span class="n">imagen</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -630,7 +630,7 @@ Luego, se suman todos estos productos. Este total es el nuevo valor del píxel c
 <p>En algunos casos, los valores del kernel se normalizan (por ejemplo, asegurándose de que sumen 1) para mantener el rango de intensidad de la imagen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">aplicar_filtro_bordes</span><span class="p">(</span><span class="n">imagen</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">aplicar_filtro_bordes</span><span class="p">(</span><span class="n">imagen</span><span class="p">):</span>
     <span class="c1"># Convertir imagen a un array de numpy</span>
     <span class="n">pixels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imagen</span><span class="p">)</span>
 
@@ -694,11 +694,11 @@ Luego, se suman todos estos productos. Este total es el nuevo valor del píxel c
 <h2>Ahora revisemos una estrategia paralela. Multiprocessing<a class="headerlink" href="#ahora-revisemos-una-estrategia-paralela-multiprocessing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">cpu_count</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multiprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pool</span><span class="p">,</span> <span class="n">cpu_count</span>
 </pre></div>
 </div>
 </div>
@@ -707,7 +707,7 @@ Luego, se suman todos estos productos. Este total es el nuevo valor del píxel c
 <h3>Cambiemos un poco la lógica<a class="headerlink" href="#cambiemos-un-poco-la-logica" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">aplicar_filtro_seccion</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">aplicar_filtro_seccion</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="n">pixels</span><span class="p">,</span> <span class="n">inicio</span><span class="p">,</span> <span class="n">fin</span><span class="p">,</span> <span class="n">ancho</span> <span class="o">=</span> <span class="n">args</span>
     <span class="c1"># Kernel de Sobel para bordes verticales</span>
     <span class="n">kernel_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
@@ -728,7 +728,7 @@ Luego, se suman todos estos productos. Este total es el nuevo valor del píxel c
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esta función se encarga de gestionar los procesos y los &quot;pedazos&quot; de imagen que le manda a cada proceso.</span>
 
-<span class="k">def</span> <span class="nf">aplicar_filtro_bordes_multiprocessing</span><span class="p">(</span><span class="n">imagen</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">aplicar_filtro_bordes_multiprocessing</span><span class="p">(</span><span class="n">imagen</span><span class="p">):</span>
     <span class="n">pixels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imagen</span><span class="p">)</span>
     <span class="n">alto</span><span class="p">,</span> <span class="n">ancho</span> <span class="o">=</span> <span class="n">pixels</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">num_procesos</span> <span class="o">=</span> <span class="n">cpu_count</span><span class="p">()</span>
@@ -803,7 +803,7 @@ Tiempo de ejecución: 17.785150051116943 segundos
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unidades/Unidad_8"
+            path: "./Unidades\Unidad_8"
         },
         predefinedOutput: true
     }
