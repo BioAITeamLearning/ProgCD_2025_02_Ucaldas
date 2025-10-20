@@ -1,7 +1,7 @@
 ---
 title: Unidad 6
 ---
-# Unidad 5: Infraestructura de cluster
+# Unidad 6: Infraestructura de cluster
 
 ## Contenido de la unidad
 
