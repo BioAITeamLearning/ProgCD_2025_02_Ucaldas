@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Unidad 6: Concurrencia para desarrollo web &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
+    <title>Unidad 7: Concurrencia para desarrollo web &#8212; Programación Concurrente y Distribuida 2025 - 02 Ucaldas</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -61,6 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Unidad6_5';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Unidad 6: Infraestructura de cluster" href="Unidad6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -123,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -180,7 +179,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="Unidad1.html">Unidad 1: Clusters en computación paralela/distribuida</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_1/repasoPythonC.html">Repaso Python y C para programación concurrente y distribuida</a></li>
 
@@ -262,6 +261,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/Tarea%201.html">Tarea 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/HilosJavaBasico.html">HilosJavaBasico</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_4/Tarea%202.html">Tarea 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidad5.html">Sockets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsBasicoPython.html">SocketsBasicoPython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsServerPython.html">SocketsServerPython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsClientePython.html">SocketsClientePython</a></li>
@@ -269,10 +269,10 @@
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/SocketsClienteJava.html">SocketsClienteJava</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/GPTChatServer.html">GPTChatServer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/GPTChatClient.html">GPTChatClient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unidades/Unidad_5/Tarea%20Unidad%20hilos%20y%20sockets.html">Tarea Unidad 4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="BigData.html">Unidad 5 Big Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Unidades/UnidadBigData/MapReduce.html">MapReduce</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/UnidadBigData/spark_tutorial.html"><strong>Tutorial de Spark: Aprendiendo Apache Spark</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="Unidades/UnidadBigData/RDDs%20Spark.html">Entendiendo la Paralelización en Apache Spark: Un Vistazo a Bajo Nivel con RDDs</a></li>
 
@@ -285,6 +285,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="Unidad6.html">Unidad 6: Infraestructura de cluster</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Unidad 7: Concurrencia para desarrollo web</a></li>
 </ul>
 
     </div>
@@ -470,7 +471,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unidad 6: Concurrencia para desarrollo web</h1>
+    <h1>Unidad 7: Concurrencia para desarrollo web</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -509,30 +510,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unidad-6-concurrencia-para-desarrollo-web">
-<h1>Unidad 6: Concurrencia para desarrollo web<a class="headerlink" href="#unidad-6-concurrencia-para-desarrollo-web" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unidad-7-concurrencia-para-desarrollo-web">
+<h1>Unidad 7: Concurrencia para desarrollo web<a class="headerlink" href="#unidad-7-concurrencia-para-desarrollo-web" title="Link to this heading">#</a></h1>
 <section id="ejemplos-visuales">
 <h2>Ejemplos visuales<a class="headerlink" href="#ejemplos-visuales" title="Link to this heading">#</a></h2>
 <p>Vamos a describir más a fondo los paradigmas clave de concurrencia con diagramas visuales:</p>
 <section id="codigo-sincronico">
 <h3>Código sincrónico<a class="headerlink" href="#codigo-sincronico" title="Link to this heading">#</a></h3>
 <p>Código sincrónico: Con el código sincrónico, las tareas se ejecutan secuencialmente, una tras otra.</p>
-<img src="https://verdantfox.com/static/images/blog_uploaded/1707353462572762.svg"/>
+<img src="https://preview.redd.it/lpf0u9nbj7w41.jpg?auto=webp&s=baeaffd073acee25e051403940485f8f192a9caa"/>
 </section>
 <section id="codigo-async-await">
 <h3>Código Async/await<a class="headerlink" href="#codigo-async-await" title="Link to this heading">#</a></h3>
 <p>Con async/await, todo el código de Python se ejecuta en un solo hilo. Las tareas se ejecutan de manera concurrente (pero no en paralelo). Establecemos pasos de espera en el código donde esperamos que se complete el trabajo limitado por E/S y otras tareas continúan trabajando en el hilo principal mientras esperan. Muchas tareas parecen ejecutarse al mismo tiempo porque muchas pueden estar esperando trabajo de E/S al mismo tiempo. Un bucle de eventos coordina las tareas en espera, reanudando el código de Python cuando se completa el trabajo de E/S en segundo plano.</p>
-<img src="https://verdantfox.com/static/images/blog_uploaded/1707353476134405.svg"/>
+<img src="https://www.khmer168.com/wp-content/uploads/2024/01/1_GQAZITgyVhwf98vjki7S9A-e1704192587774.png"/>
 </section>
 <section id="codigo-con-hilos">
 <h3>Código con hilos<a class="headerlink" href="#codigo-con-hilos" title="Link to this heading">#</a></h3>
 <p>Con el código con hilos, las tareas se ejecutan de manera concurrente (pero no en paralelo). A diferencia del código estilo async/await, no establecemos lugares específicos para esperar a que se completen las tareas en segundo plano. En cambio, nuestra CPU coordina todos los hilos, alternando cuál hilo ejecuta código en cualquier momento dado. Debido al GIL (Global Interpreter Lock), solo un hilo puede ejecutar código de Python a la vez. Sin embargo, muchos hilos pueden estar esperando que se complete el trabajo limitado por E/S en segundo plano mientras un hilo activo ejecuta código de Python. La CPU alterna rápidamente el hilo activo, a veces incluso alternando entre el inicio de una línea de código de Python y el final de esa misma línea. Por lo tanto, las condiciones de carrera en el código con hilos son menos predecibles que en el código async/await.</p>
-<img src="https://verdantfox.com/static/images/blog_uploaded/170735349660149.svg"/>
+<img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh68e994yuiu8pr14h7lk.png"/>
 </section>
 <section id="codigo-con-procesamiento-multiple-multiprocessing">
 <h3>Código con procesamiento múltiple (multiprocessing)<a class="headerlink" href="#codigo-con-procesamiento-multiple-multiprocessing" title="Link to this heading">#</a></h3>
 <p>Con el código de multiprocesamiento en Python, las tareas se ejecutan en paralelo en múltiples núcleos de CPU al mismo tiempo. Cada tarea de multiproceso se ejecuta en un proceso de Python separado y mayormente aislado. El multiprocesamiento puede acelerar enormemente el código de Python que no involucra trabajo de E/S, como operaciones intensivas en matemáticas. Sin embargo, el multiprocesamiento tiene limitaciones. Hay un costo de inicio significativo para los nuevos procesos, y la comunicación entre procesos es limitada y relativamente lenta.</p>
-<img src="https://verdantfox.com/static/images/blog_uploaded/170735350895616.svg"/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*6Y7JWcTJUS4v4_CVHx8CCA.png"/>
 </section>
 </section>
 <section id="veamos-mas-a-fondo-el-proceso-de-concurrencia-y-paralelismo">
@@ -628,7 +629,7 @@ document.write(`
 <p class="sd-card-text"><strong>💬 Repositorio de apoyo</strong></p>
 </div>
 <div class="sd-card-body text-center docutils">
-<a class="reference internal image-reference" href="https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg"><img alt="https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg" src="https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg" style="height: 100px;" />
+<a class="reference internal image-reference" href="https://images.seeklogo.com/logo-png/30/2/github-logo-png_seeklogo-304612.png"><img alt="https://images.seeklogo.com/logo-png/30/2/github-logo-png_seeklogo-304612.png" src="https://images.seeklogo.com/logo-png/30/2/github-logo-png_seeklogo-304612.png" style="height: 100px;" />
 </a>
 <p class="sd-card-text">Repositorio con ejemplos de concurrencia y paralelismo en Python.</p>
 </div>
@@ -670,6 +671,15 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Unidad6.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Unidad 6: Infraestructura de cluster</p>
+      </div>
+    </a>
 </div>
                 </footer>
               

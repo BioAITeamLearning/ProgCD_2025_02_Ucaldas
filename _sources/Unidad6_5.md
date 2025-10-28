@@ -1,7 +1,7 @@
 ---
-title: Unidad  6
+title: Unidad  7
 ---
-# Unidad 6: Concurrencia para desarrollo web
+# Unidad 7: Concurrencia para desarrollo web
 
 
 ## Ejemplos visuales
@@ -12,26 +12,26 @@ Vamos a describir más a fondo los paradigmas clave de concurrencia con diagrama
 
 Código sincrónico: Con el código sincrónico, las tareas se ejecutan secuencialmente, una tras otra.
 
-<img src="https://verdantfox.com/static/images/blog_uploaded/1707353462572762.svg"/>
+<img src="https://preview.redd.it/lpf0u9nbj7w41.jpg?auto=webp&s=baeaffd073acee25e051403940485f8f192a9caa"/>
 
 ### Código Async/await
 
 Con async/await, todo el código de Python se ejecuta en un solo hilo. Las tareas se ejecutan de manera concurrente (pero no en paralelo). Establecemos pasos de espera en el código donde esperamos que se complete el trabajo limitado por E/S y otras tareas continúan trabajando en el hilo principal mientras esperan. Muchas tareas parecen ejecutarse al mismo tiempo porque muchas pueden estar esperando trabajo de E/S al mismo tiempo. Un bucle de eventos coordina las tareas en espera, reanudando el código de Python cuando se completa el trabajo de E/S en segundo plano.
 
 
-<img src="https://verdantfox.com/static/images/blog_uploaded/1707353476134405.svg"/>
+<img src="https://www.khmer168.com/wp-content/uploads/2024/01/1_GQAZITgyVhwf98vjki7S9A-e1704192587774.png"/>
 
 ### Código con hilos
 
 Con el código con hilos, las tareas se ejecutan de manera concurrente (pero no en paralelo). A diferencia del código estilo async/await, no establecemos lugares específicos para esperar a que se completen las tareas en segundo plano. En cambio, nuestra CPU coordina todos los hilos, alternando cuál hilo ejecuta código en cualquier momento dado. Debido al GIL (Global Interpreter Lock), solo un hilo puede ejecutar código de Python a la vez. Sin embargo, muchos hilos pueden estar esperando que se complete el trabajo limitado por E/S en segundo plano mientras un hilo activo ejecuta código de Python. La CPU alterna rápidamente el hilo activo, a veces incluso alternando entre el inicio de una línea de código de Python y el final de esa misma línea. Por lo tanto, las condiciones de carrera en el código con hilos son menos predecibles que en el código async/await.
 
-<img src="https://verdantfox.com/static/images/blog_uploaded/170735349660149.svg"/>
+<img src="https://media2.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh68e994yuiu8pr14h7lk.png"/>
 
 ### Código con procesamiento múltiple (multiprocessing)
 
 Con el código de multiprocesamiento en Python, las tareas se ejecutan en paralelo en múltiples núcleos de CPU al mismo tiempo. Cada tarea de multiproceso se ejecuta en un proceso de Python separado y mayormente aislado. El multiprocesamiento puede acelerar enormemente el código de Python que no involucra trabajo de E/S, como operaciones intensivas en matemáticas. Sin embargo, el multiprocesamiento tiene limitaciones. Hay un costo de inicio significativo para los nuevos procesos, y la comunicación entre procesos es limitada y relativamente lenta.
 
-<img src="https://verdantfox.com/static/images/blog_uploaded/170735350895616.svg"/>
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*6Y7JWcTJUS4v4_CVHx8CCA.png"/>
 
 
 ## Veamos más a fondo el proceso de concurrencia y paralelismo
@@ -197,7 +197,7 @@ Por ejemplo:
 :link: https://github.com/johanpina/concurrency_parallelism
 **💬 Repositorio de apoyo**
 ^^^
-```{image} https://banner2.cleanpng.com/20180331/udw/kisspng-social-media-github-computer-icons-logo-github-5ac0188083c4f5.8572681115225386245397.jpg
+```{image} https://images.seeklogo.com/logo-png/30/2/github-logo-png_seeklogo-304612.png
 :height: 100
 ```
 
