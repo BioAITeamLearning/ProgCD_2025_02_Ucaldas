@@ -64,3 +64,9 @@ chapters:
 
 - file: Unidad6
 
+- file: Unidad6_5
+- file: Unidad7
+  sections:
+  - file: Unidades/Unidad_7/threadsC
+  - file: Unidades/Unidad_7/OpenMP_en_C 
+
