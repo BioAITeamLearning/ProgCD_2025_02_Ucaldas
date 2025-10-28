@@ -1,7 +1,7 @@
 ---
-title: Unidad 7
+title: Unidad 8
 ---
-# Unidad 7: OpenMP
+# Unidad 8: OpenMP
 
 ## Contenido de la unidad
 
